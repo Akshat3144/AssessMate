@@ -1,0 +1,519 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png'%}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.gstatic.com'%}" rel="preconnect">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i'%}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/simple-datatables/style.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
+  <link href="{% static 'teaching.css'%}" rel="stylesheet">
+  <script scr="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="{% static 'assets/img/logo2.png'%}" alt="">
+        <span class="d-none d-lg-block">AssessMate</span>
+      </a>
+      <!-- ////////////////////////// -->
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+       <!-- ////////////////////////// -->
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Schedule Update</h4>
+                <p>Your office hours for tomorrow have been rescheduled to 12:00pm.</p> 
+                <!-- Please adjust your calendar accordingly. -->
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Alert</h4>
+                <p>Mudasir has not logged into the course platform for the past 7 days.</p>
+                <!-- Consider reaching out to offer support and encouragement. -->
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>New Assignment Submission</h4>
+                <p>Assignment 4 received from Raghav</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Reminder</h4>
+                <p>You have a class scheduled in 1 hour. </p>
+                <!-- Please prepare your materials and be ready to start on time. Good luck with the lesson! -->
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="{% static 'assets/img/Screenshot 2024-02-24 213152-modified.png'%}" alt="" class="rounded-circle">
+                <div>
+                  <h4>Rajat Singla</h4>
+                  <p>Hi Professor, I noticed that some students are having difficulty understanding question 3 of the latest assig........</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/Screenshot 2024-02-24 213617-modified.png" alt="" class="rounded-circle">
+                <div>
+                  <h4>Vijay Sahni</h4>
+                  <p>I've reviewed the recent quiz results and noticed a common misunderstanding among several students regarding the topic we cov.........</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/Screenshot 2024-02-24 214026-modified (1).png" alt="" class="rounded-circle">
+                <div>
+                  <h4>Raghav Sarna</h4>
+                  <p>Hi sir, I wanted to confirm the schedule for the upcoming guest lecture. Should I proceed wit...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/hero-modified2.png" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Akshat</span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Akshat Gupta</h6>
+              <span>Computer Enthusiast</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li> <!-- End Dashboard Nav -->
+
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="forms-elements.html">
+              <i class="bi bi-circle"></i><span>Form Elements</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-editors.html">
+              <i class="bi bi-circle"></i><span>Form Editors</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span>Form Validation</span>
+            </a>
+          </li>
+        </ul>
+      </li> -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-card-list"></i>
+          <span>Courses</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Mathematics of Uncertainity</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Engineering Math in Action</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Programming and Data Structures</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Foundation of Physical World</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Register Page Nav -->
+<!-- 
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>Remix Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>Boxicons</span>
+            </a>
+          </li>
+        </ul>
+      </li> -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login With Another Account</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main;">
+
+    <div class="pagetitle">
+      <h1>Teaching Evaluation</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home / Dashboard</a></li>
+          <li class="breadcrumb-item active">Teaching Evaluation</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+<div id="inputx" style=" padding: 1rem; font-size: 1rem; background-color: white; color: darkblue; border: none; margin-top: 5rem; ;margin-right: 20rem; text-align: center; border-radius: 20px;">
+<!--    <form method="POST" enctype="multipart/form-data">-->
+<!--      {%csrf_token%}-->
+
+<!--      {{form}}-->
+<!--    <input type="submit">-->
+<!--    </form>-->
+<form method="post" enctype="multipart/form-data" style="text-align:centre;">
+    {% csrf_token %}
+    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload file</label>
+  <div style="width:100%; margin-bottom:1rem; padding-left: 7rem;;">
+    {{form}}
+  </div>
+
+    <button type="submit" style="border:none; background-color:darkblue; color:white; border-radius:10px; padding-left:1rem; padding-right:1rem;">Submit</button>
+</form>
+
+
+<!--.button-68 {-->
+<!--  appearance: none;-->
+<!--  background-color: #27ae60;-->
+<!--  border-radius: 8px;-->
+<!--  border-style: none;-->
+<!--  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;-->
+<!--  box-sizing: border-box;-->
+<!--  color: #fff;-->
+<!--  cursor: pointer;-->
+<!--  display: inline-block;-->
+<!--  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;-->
+<!--  font-size: 16px;-->
+<!--  font-weight: 600;-->
+<!--  letter-spacing: normal;-->
+<!--  line-height: 1.5;-->
+<!--  outline: none;-->
+<!--  overflow: hidden;-->
+<!--  padding: 13px 20px;-->
+<!--  position: relative;-->
+<!--  text-align: center;-->
+<!--  text-decoration: none;-->
+<!--  transform: translate3d(0, 0, 0);-->
+<!--  transition: all .3s;-->
+<!--  user-select: none;-->
+<!--  -webkit-user-select: none;-->
+<!--  touch-action: manipulation;-->
+<!--  vertical-align: top;-->
+<!--  white-space: nowrap;-->
+<!--}-->
+
+<!--.button-68:hover {-->
+<!--  background-color: #1e8449;-->
+<!--  opacity: 1;-->
+<!--  transform: translateY(0);-->
+<!--  transition-duration: .35s;-->
+<!--}-->
+
+<!--.button-68:active {-->
+<!--  transform: translateY(2px);-->
+<!--  transition-duration: .35s;-->
+<!--}-->
+
+<!--.button-68:hover {-->
+<!--  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;-->
+<!--}-->
+  <div id="preview"></div>
+</div>
+<button id="myButton" style="margin-top: 2rem; margin-left: 18rem;margin-right: 30rem; text-align: center; border: none; background-color: darkblue; color:white; font-size:1.5rem; padding:2rem; border-radius:20px; width: 20rem; height: 5rem; display: flex; align-items: center; justify-content: center;">Generate Feedback !</button>
+    <div id="result" style="margin-top: 5rem; margin-right: 20rem; text-align: center; background-color:white; color: darkblue; padding:2rem; border-radius:20px;"></div>
+
+  </main>
+
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            // Make an AJAX request to the backend
+            fetch('/my_function/')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the result on the webpage
+                    document.getElementById('result').innerText = data.result;
+                });
+        });
+    </script>
+
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .footer {
+      margin-top: auto;
+    }
+  </style>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Akshat</span></strong>. You Dare to Copy !!
+    </div>
+    <div class="credits">
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/apexcharts/apexcharts.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/chart.js/chart.umd.js'%}"></script>
+  <script src="{% static 'assets/vendor/echarts/echarts.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/quill/quill.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/simple-datatables/simple-datatables.js'%}"></script>
+  <script src="{% static 'assets/vendor/tinymce/tinymce.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+  <script src="{% static 'teaching.js'%}"></script>
+</body>
+
+</html>

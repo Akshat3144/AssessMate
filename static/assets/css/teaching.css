@@ -1,0 +1,45 @@
+.result-box {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: white;
+  color: darkblue;
+  text-align: justify;
+}
+
+#Boxes{
+    display: flex;
+    margin-left: 20rem;
+}
+
+.result-box h2 {
+  margin-top: 0;
+}
+
+#resultBox1 {
+    height: 30rem;
+    width: 30rem;
+}
+
+#resultBox2 {
+    height: 30rem;
+    width: 30rem;
+    margin-left: 5rem;
+}
+
+#resultBox3 {
+    height: 20rem;
+    width: 50rem;
+    margin-left: 20rem;
+}
+
+#inputx{
+    margin-top: 10rem;
+    margin-left: 42rem;
+}
+
+#inputx input{
+    font-size: 2rem;
+    background-color: white;
+    color: darkblue;
+    border: none;
+}
